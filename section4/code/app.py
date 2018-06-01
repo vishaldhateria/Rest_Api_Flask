@@ -1,14 +1,29 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
 
+items= []
+
 #  inheritance from Resource class
-class Student(Resource):
+class Item(Resource):
     def get(self,name):
-        return{'student': name}
+        item = next(filer(lambda x: x['name'] == name), None) #to get only one item use next if next find no item will return None
+        return {'item': None}, 200 if item else 404 #404 popular status code
+    def post(self,name):
+        item = next(filer(lambda x: x['name'] == name), None) is not None:
+            return {'message' : "An item with name '{}' already exists.".format(name)} , 400
+        data = request.get_json()
+        item = {'name':name, 'price':data['price']}
+        items.append(item)
+        return item, 201
 
-api.add_resource(Student,'/student/<string:name>')
+class ItemList(Resource):
+    def get(self):
+        return {'items': items}
 
-app.run(port=5000)
+api.add_resource(Item,'/item/<string:name>')
+api.add_resource(ItemList,'/items')
+
+app.run(port=5000, debug=True)
