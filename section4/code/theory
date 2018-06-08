@@ -1,0 +1,70 @@
+
+Class : 
+
+Class is a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality.
+
+In technical terms we can say that class is a blue print for individual objects with exact behaviour.
+
+Object :
+
+object is one of instances of the class. which can perform the functionalities which are defined in the class.
+
+self :
+
+self represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python.
+
+__init__ :
+
+"__init__" is a reseved method in python classes. It is known as a constructor in object oriented concepts. This method called when an object is created from the class and it allow the class to initialize the attributes of a class.
+
+id is not a keyword in Python, but it is the name of a built-in function.
+
+The keywords are:
+
+and       del       from      not       while
+as        elif      global    or        with
+assert    else      if        pass      yield
+break     except    import    print
+class     exec      in        raise
+continue  finally   is        return
+def       for       lambda    try
+
+id(object) -- it is an inbuilt function
+Return the “identity” of an object. This is an integer which is guaranteed to be unique and constant for this object during its lifetime. Two objects with non-overlapping lifetimes may have the same id() value.
+
+CPython implementation detail: This is the address of the object in memory.
+
+The syntax of next() is:
+
+next(iterator, default)
+next() Parameters
+iterator - next() retrieves next item from the iterator
+default (optional) - this value is returned if the iterator is exhausted (no items left)
+Return Value from next()
+The next() returns the next item from the iterator.
+
+If the iterator is exhausted, it returns default value (if provided).
+
+If the default parameter is omitted and iterator is exhausted, it raises StopIteration
+In simple words, the filter() method filters the given iterable with the help of a function that tests each element in the iterable to be true or not.
+
+The syntax of filter() method is:
+
+filter(function, iterable)
+filter() Parameters
+The filter() method takes two parameters:
+
+function - function that tests if elements of an iterable returns true or false
+If None, the function defaults to Identity function - which returns false if any elements are false
+iterable - iterable which is to be filtered, could be sets, lists, tuples, or containers of any iterators
+Return value from filter()
+The filter() method returns an iterator that passed the function check for each element in the iterable.
+
+
+lambda arguments: expression
+Lambda functions can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions can be used wherever function objects are required.
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered and unindexed. No duplicate members.
+Dictionary is a collection which is unordered, changeable and indexed. No duplicate members.
